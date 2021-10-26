@@ -3,9 +3,8 @@ from flask import Flask, request, current_app, redirect
 app = Flask('__name__')
 
 @app.route('/')
-
 def index():
-    return "Hello Flask"
+    return render_template('index.html', name='Max')
 
 @app.route('/user/<int:user_id>')
 def user_profile(user_id):
