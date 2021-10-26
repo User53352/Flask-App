@@ -4,7 +4,9 @@ app = Flask('__name__')
 
 @app.route('/')
 def index():
-    return render_template('index.html', name='Max')
+    name, age, profession, city = "Jerry", 24 "years", "Programmer", "Moscow"
+    template_context = dict(name=name, age=age, profession=profession, city=city)
+    return render_template('index.html', **template_context)
 
 @app.route('/user/<int:user_id>')
 def user_profile(user_id):
