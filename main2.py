@@ -2,7 +2,7 @@ from flask import Flask, request, current_app, redirect
 
 app = Flask('__name__')
 
-@app.route('/')
+@app.route('/') #отрисовка шаблона с помощью render_template()
 def index():
     name, age, profession, city = "Jerry", 24 "years", "Programmer", "Moscow"
     template_context = dict(name=name, age=age, profession=profession, city=city)
