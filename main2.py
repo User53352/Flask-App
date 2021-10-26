@@ -4,7 +4,7 @@ app = Flask('__name__')
 
 @app.route('/') #отрисовка шаблона с помощью render_template()
 def index():
-    name, age, profession, city = "Jerry", 24 "years", "Programmer", "Moscow"
+    name, age, profession, city = "Max", 24 "years", "Programmer", "Moscow"
     template_context = dict(name=name, age=age, profession=profession, city=city)
     return render_template('index.html', **template_context)
 
